@@ -34,10 +34,17 @@ wee_alloc = { version = "0.4.2", optional = true }
 # The `web-sys` crate allows you to interact with the various browser APIs,
 # like the DOM.
 [dependencies.web-sys]
+features = [
+    "console",
+    "Document",
+    "Element",
+    "HtmlCanvasElement",
+    "Window",
+    "CanvasRenderingContext2d",
+]
+
+
 version = "0.3.22"
-features = ["console"]
-
-
 # These crates are used for running unit tests.
 [dev-dependencies]
 wasm-bindgen-test = "0.3.42"
